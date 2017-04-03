@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style-next.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Переместите белый прямоугольник на место, обозначенное контуром</h1>
+        <h1>с помощью значений свойств CSS.</h1>
+        <pre class="code">
+          .container {
+            <em class="white">width:</em> 600px;
+            <em class="white">height:</em> 300px;
+            <em class="white">background-color:</em> darkslateblue;
+          }
+
+          .box {
+            <em class="white">width:</em> 100px;
+            <em class="white">height:</em> 60px;
+            <em class="white">background-color:</em> lemonchiffon;
+            <label><em class="white">margin-left:</em><input type="number" id="mx" value="0"></label>
+            <!-- <label><em class="white">margin-top:&nbsp;</em><input type="number" id="my" value="0"></label> -->
+          }
+      </pre>
+        <button class="sbmt" type="submit" id="sb">применить</button>
+        <a class="sbmt" type="submit" id="next" href="../1/01.html">Следующее задание</a>
+        <div class="container" id="container">
+            <div class="box-goal">&nbsp;</div>
+            <div class="box" id="box">
+                <p>.box</p>
+                <p><em>&nbsp;left:&nbsp;<span id="box-x"></span></em></p>
+                <!-- <p><em>&nbsp;top:&nbsp;<span id="box-y"></span></em></p> -->
+            </div>
+            <p id="container-p">.container</p>
+        </div>
+    </div>
+    <div id="congratulation">
+        <h1>Поздравляю! Вы ответили правильно!</h1></div>
+    <script src="../../js/libDOM.js"></script>
+    <script src="main-next.js"></script>
+    <script src="../../js/alert.js"></script>
+    <script>
+        about('Размеры блока отсчитываюся от верхнего левого угла (обведен красным кругом).');
+    </script>
+      <script src="../../js/close_modal.js"></script>
+</body>
+
+</html>

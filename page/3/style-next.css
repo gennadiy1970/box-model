@@ -1,0 +1,13 @@
+
+.box-goal {
+  width: 98px;
+  height: 58px;
+  border: 1px dotted  #eee;
+  position: absolute;
+  top: 120px;
+  left: 250px;
+}
+
+#container-p {
+  margin-left: 100px;
+}

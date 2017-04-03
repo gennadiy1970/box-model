@@ -1,0 +1,8 @@
+.box-goal {
+  width: 98px;
+  height: 58px;
+  border: 1px dotted  #eee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
