@@ -1,13 +1,59 @@
 
-.box-goal {
+.box-goal, .box2-goal {
   width: 98px;
   height: 58px;
-  border: 1px dotted  #eee;
+  line-height: 58px;
+  text-align: center;
+}
+
+.box-goal{
   position: absolute;
-  top: 120px;
+  top: 50px;
+  left: 250px;
+  border: 1px dotted  #eee;
+  color:  #eee;
+}
+.box2-goal{
+  border: 1px dotted  orange;
+  color: orange;
+  position: absolute;
+  top: 135px;
   left: 250px;
 }
 
 #container-p {
   margin-left: 100px;
+}
+
+.box { margin-left: 500px;  }
+
+.box2 {
+  width: 100px;
+  height: 60px;
+  background-color: orange;
+  color:  darkslateblue;
+  position: relative;
+  margin-left: 500px;
+}
+
+.box2::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: red;
+}
+
+input[type="text"] {
+  margin: 10px 0;
+  padding: 8px 10px;
+  color: #eee;
+  background-color: hsl(210, 26%, 32%);
+  font-size: 20px;
+  font-family: monospace;
+  border: none;
+  width: 4rem;
 }

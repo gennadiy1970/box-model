@@ -1,39 +1,51 @@
-const my     = _id("my"),
-      mx     = _id("mx"),
-      boxY   = _id("box-y"),
-      boxX   = _id("box-x"),
-      sb     = _id("sb"),
-      box    = _id("box"),
-      next   = _id("next"),
-      cong   = _id("congratulation");
+const my_top     = _id("my-top"),
+      my2_top    = _id("my2-top"),
+      my_btn     = _id("my-btn"),
+      my2_btn    = _id("my2-btn"),
+      mx         = _id("mx"),
+      mx2        = _id("mx2"),
+      boxYT       = _id("box-yt"),
+      boxYB       = _id("box-yb"),
+      box2YT      = _id("box2-yt"),
+      box2YB      = _id("box2-yb"),
+      sb         = _id("sb"),
+      box        = _id("box"),
+      box2       = _id("box2"),
+      next       = _id("next"),
+      cong       = _id("congratulation");
 
 const TOP    = box.getBoundingClientRect().top;
+const TOP2    = box2.getBoundingClientRect().top;
 const LEFT   = box.getBoundingClientRect().left;
-boxY.textContent = 0;
-boxX.textContent = 0;
+const LEFT2   = box2.getBoundingClientRect().left;
+boxYT.textContent = 0;
+box2YT.textContent = 0;
+boxYB.textContent = 0;
+box2YB.textContent = 0;
 sb.addEventListener('click', function() {
-  let x = +mx.value;
-  let y = +my.value;
-  console.log('y = ', y);
-  console.log('x = ', x);
-  if ( !Number.isInteger(y) ) {
-    alert('Введите целое число');
-    return false;
+  let x = mx.value;
+  let x2 = mx2.value;
+  let yt = my_top.value;
+  let yb = my_btn.value;
+  let yt2 = my2_top.value;
+  let yb2 = my2_btn.value;
+
+  box.style.margin= yt + ' ' + x + ' ' + yb;
+  box2.style.margin= yt2 + ' ' + x2 + ' ' + yb2;
+
+
+  if (x == "auto" || x == "auto;" || x == "250px") {
+    if (x2 == "auto" || x2 == "auto;" || x2 == "250px") {
+      if ( yt == "50px" && parseInt(yb) <= 25 && parseInt(yt2) == 25) {
+        next.style.display = 'block';
+        cong.style.display = 'block';
+        sb.style.display = 'none';
+      }
+    }
   }
-  if ( !Number.isInteger(+x) ) {
-    alert('Введите целое число');
-    return false;
-  }
-  box.style.marginTop = y + 'px';
-  box.style.marginLeft= x + 'px';
-  // let rc = Math.floor(box.getBoundingClientRect().top - TOP);
-  if(y == 120 && x == 250) {
-    next.style.display = 'block';
-    cong.style.display = 'block';
-    sb.style.display = 'none';
-  }
-  boxY.textContent = y;
-  boxX.textContent = x;
-  mx.value = 0;
-  my.value = 0;
+  boxYT.textContent = yt;
+  boxYB.textContent = yb;
+  box2YT.textContent = yt2;
+  box2YB.textContent = yb2;
+
 });
