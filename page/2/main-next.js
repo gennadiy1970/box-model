@@ -12,19 +12,27 @@ const LEFT   = box.getBoundingClientRect().left;
 boxY.textContent = 0;
 boxX.textContent = 0;
 sb.addEventListener('click', function() {
-  let x = +mx.value;
+  let x = mx.value;
   let y = +my.value;
-  console.log('y = ', y);
-  console.log('x = ', x);
+
   if ( !Number.isInteger(y) ) {
     alert('Введите целое число');
     return false;
   }
-  if ( !Number.isInteger(+x) ) {
-    alert('Введите целое число');
-    return false;
+  if ( isNaN(+x) ) {
+    if ( x == "auto" || x == 'auto;') {
+      x = 250;
+    }
   }
+  if ( !isNaN(+x) ){
+    if ( !Number.isInteger(+x) ) {
+      alert('Введите целое число');
+      return false;
+    }
+  }
+
   box.style.marginTop = y + 'px';
+
   box.style.marginLeft= x + 'px';
   // let rc = Math.floor(box.getBoundingClientRect().top - TOP);
   if(y == 120 && x == 250) {

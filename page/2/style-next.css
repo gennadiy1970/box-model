@@ -11,3 +11,14 @@
 #container-p {
   margin-left: 100px;
 }
+
+input[type="text"] {
+  margin: 10px 0;
+  padding: 8px 10px;
+  color: #eee;
+  background-color: hsl(210, 26%, 32%);
+  font-size: 20px;
+  font-family: monospace;
+  border: none;
+  width: 60px;
+}
