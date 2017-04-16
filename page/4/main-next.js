@@ -23,9 +23,9 @@ sb.addEventListener('click', function() {
 
 
 
-  if ( m_left == "50px;") {
-    if ( disp == "inline-block;") {
-      if ( v_align == "top" || v_align == "top;" ||  v_align == "text-top;") {
+  if ( m_left == "50px" || m_left == "50px;" ) {
+    if ( disp == "inline-block" || disp == "inline-block;") {
+      if ( v_align == "top" || v_align == "top;" ||  v_align == "text-top;" || v_align == "text-top") {
         // next.style.display = 'block';
         cong.style.display = 'block';
         sb.style.display = 'none';
