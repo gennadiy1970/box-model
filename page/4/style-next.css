@@ -1,0 +1,91 @@
+.container {
+  height: 400px;
+  font-size: 16px;
+}
+.box-goal, .box1-goal, .box2-goal {
+  width: 98px;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+}
+
+.box-goal{
+  position: absolute;
+  border: 1px dotted  #eee;
+  top: 0;
+  left: 50px;
+  color:  #eee;
+}
+
+.box1-goal{
+  position: absolute;
+  border: 1px dotted  red;
+  height: 98px;
+  top: 0;
+  left: 204px;
+  color:  #eee;
+}
+.box2-goal{
+  position: absolute;
+  border: 1px dotted  orange;
+  height: 158px;
+  color: orange;
+  top: 0;
+  left: 360px;
+}
+
+#container-p {
+  margin-left: 100px;
+}
+
+.box {
+  /*margin-left: 500px;*/
+  height: 60px;
+}
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color:  darkslateblue;
+  position: relative;
+  /*margin-left: 500px;*/
+}
+
+.box2 {
+  width: 100px;
+  height: 160px;
+  background-color: orange;
+  color:  darkslateblue;
+  position: relative;
+  /*margin-left: 500px;*/
+}
+
+.box2::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: red;
+}
+
+input[type="text"] {
+  margin: 10px 0;
+  padding: 2px 10px;
+  background-color: hsl(210, 26%, 32%);
+  font-size: 20px;
+  font-family: monospace;
+  border: none;
+  width: 4rem;
+  color: hsl(8, 56%, 54%);
+}
+#my-display, #my-va {
+  width: 10rem;
+}
+
+.item {
+  /*display: inline-block;*/
+}
