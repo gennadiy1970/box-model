@@ -85,7 +85,21 @@ input[type="text"] {
 #my-display, #my-va {
   width: 10rem;
 }
+.pc {
+
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
 
 .item {
-  /*display: inline-block;*/
+  box-sizing: border-box;
+  margin-left: 0;
+  padding-top: 40px;
+  display: block;
+  vertical-align: baseline;
+  border: 1px solid transparent;
+}
+
+#box2 > .pc {
+  margin-top: 100px;
 }
